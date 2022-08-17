@@ -1,0 +1,14 @@
+#Requerimientos 
+
+Python 3.10.0 
+
+pip install django==3.2.8
+pip django-extensions 3.2.0
+pip install pyMysql
+
+#ingresar a la carpeta 
+cd prueba
+
+
+
+
