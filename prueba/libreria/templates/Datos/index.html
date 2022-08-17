@@ -1,0 +1,49 @@
+{% extends "paginas/base.html" %} {%block titulo%}  {% endblock %}
+
+
+
+{% block contenido %}
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Crear Datos</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Datos</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Telefono</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 {% for datos in variable%}
+                                <tr>
+                                    <td> {{ datos.id }}</td>
+                                    <td>{{ datos.nombre }}</td>
+                                    <td>{{ datos.apellido }}</td>
+                                    <td>{{ datos.telefono }}</td>
+                                    <td>
+                                        <a name=" " id=" " class="btn btn-danger" href=" {% url 'eliminar' datos.id %}" role="button"> Borrar </a>
+                                        <a name=" " id=" " class="btn btn-primary" href=" {% url 'modificar' datos.id %}" role="button"> Editar </a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+{% endblock %}
